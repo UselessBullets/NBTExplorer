@@ -90,6 +90,7 @@ namespace NBTExplorer.Model
             _tagRegistry[TagType.TAG_BYTE_ARRAY] = typeof(TagByteArrayDataNode);
             _tagRegistry[TagType.TAG_COMPOUND] = typeof(TagCompoundDataNode);
             _tagRegistry[TagType.TAG_DOUBLE] = typeof(TagDoubleDataNode);
+            _tagRegistry[TagType.TAG_DOUBLE_ARRAY] = typeof(TagDoubleArrayDataNode);
             _tagRegistry[TagType.TAG_FLOAT] = typeof(TagFloatDataNode);
             _tagRegistry[TagType.TAG_INT] = typeof(TagIntDataNode);
             _tagRegistry[TagType.TAG_INT_ARRAY] = typeof(TagIntArrayDataNode);
@@ -120,6 +121,8 @@ namespace NBTExplorer.Model
                     return new TagNodeCompound();
                 case TagType.TAG_DOUBLE:
                     return new TagNodeDouble(0);
+                case TagType.TAG_DOUBLE_ARRAY:
+                    return new TagNodeDoubleArray(new double[0]);
                 case TagType.TAG_FLOAT:
                     return new TagNodeFloat(0);
                 case TagType.TAG_INT:

@@ -101,6 +101,7 @@
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._nodeTree = new NBTExplorer.Vendor.MultiSelectTreeView.MultiSelectTreeView();
             this._buttonAddTagLongArray = new System.Windows.Forms.ToolStripButton();
+            this._buttonAddTagDoubleArray = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -440,6 +441,7 @@
             this._buttonAddTagByteArray,
             this._buttonAddTagIntArray,
             this._buttonAddTagLongArray,
+            this._buttonAddTagDoubleArray,
             this._buttonAddTagString,
             this._buttonAddTagList,
             this._buttonAddTagCompound,
@@ -747,6 +749,16 @@
             this._buttonAddTagLongArray.Size = new System.Drawing.Size(23, 22);
             this._buttonAddTagLongArray.Text = "Add Long Array Tag";
             // 
+            // _buttonAddTagLongArray
+            // 
+            this._buttonAddTagDoubleArray.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._buttonAddTagDoubleArray.Image = ((System.Drawing.Image)(resources.GetObject("_buttonAddTagDoubleArray.Image")));
+            this._buttonAddTagDoubleArray.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this._buttonAddTagDoubleArray.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._buttonAddTagDoubleArray.Name = "_buttonAddTagDoubleArray";
+            this._buttonAddTagDoubleArray.Size = new System.Drawing.Size(23, 22);
+            this._buttonAddTagDoubleArray.Text = "Add Double Array Tag";
+            // 
             // MainForm
             // 
             this.AllowDrop = true;
@@ -844,6 +856,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
         private System.Windows.Forms.ToolStripMenuItem _menuItemOpenInExplorer;
         private System.Windows.Forms.ToolStripButton _buttonAddTagLongArray;
+        private System.Windows.Forms.ToolStripButton _buttonAddTagDoubleArray;
     }
 }
 

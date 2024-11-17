@@ -41,6 +41,7 @@ namespace NBTExplorer.Windows
                 _tagIconIndex[TagType.TAG_INT_ARRAY] = 14;
                 _tagIconIndex[TagType.TAG_SHORT_ARRAY] = 16;
                 _tagIconIndex[TagType.TAG_LONG_ARRAY] = 17;
+                _tagIconIndex[TagType.TAG_DOUBLE_ARRAY] = 19;
             }
             catch (Exception e) {
                 Program.StaticInitFailure(e);
@@ -87,6 +88,7 @@ namespace NBTExplorer.Windows
             _buttonAddTagList.Click += _buttonAddTagList_Click;
             _buttonAddTagLong.Click += _buttonAddTagLong_Click;
             _buttonAddTagLongArray.Click += _buttonAddTagLongArray_Click;
+            _buttonAddTagDoubleArray.Click += _buttonAddTagDoubleArray_Click;
             _buttonAddTagShort.Click += _buttonAddTagShort_Click;
             _buttonAddTagString.Click += _buttonAddTagString_Click;
             _buttonFindNext.Click += _buttonFindNext_Click;
@@ -430,7 +432,7 @@ namespace NBTExplorer.Windows
                 UpdateUI(selected.Tag as DataNode);
             }
             else {
-                DisableButtons(_buttonAddTagByte, _buttonAddTagByteArray, _buttonAddTagCompound, _buttonAddTagDouble, _buttonAddTagFloat,
+                DisableButtons(_buttonAddTagByte, _buttonAddTagByteArray, _buttonAddTagCompound, _buttonAddTagDouble, _buttonAddTagDoubleArray, _buttonAddTagFloat,
                     _buttonAddTagInt, _buttonAddTagIntArray, _buttonAddTagList, _buttonAddTagLong, _buttonAddTagLongArray, _buttonAddTagShort,
                     _buttonAddTagString, _buttonCopy, _buttonCut, _buttonDelete, _buttonEdit, _buttonPaste, _buttonRefresh,
                     _buttonRename);
@@ -468,6 +470,7 @@ namespace NBTExplorer.Windows
             _buttonAddTagByteArray.Enabled = node.CanCreateTag(TagType.TAG_BYTE_ARRAY);
             _buttonAddTagCompound.Enabled = node.CanCreateTag(TagType.TAG_COMPOUND);
             _buttonAddTagDouble.Enabled = node.CanCreateTag(TagType.TAG_DOUBLE);
+            _buttonAddTagDoubleArray.Enabled = node.CanCreateTag(TagType.TAG_DOUBLE_ARRAY);
             _buttonAddTagFloat.Enabled = node.CanCreateTag(TagType.TAG_FLOAT);
             _buttonAddTagInt.Enabled = node.CanCreateTag(TagType.TAG_INT);
             _buttonAddTagIntArray.Enabled = node.CanCreateTag(TagType.TAG_INT_ARRAY);
@@ -520,6 +523,7 @@ namespace NBTExplorer.Windows
             _buttonAddTagByteArray.Enabled = _controller.CanOperateOnSelection(Predicates.CreateByteArrayNodePred);
             _buttonAddTagIntArray.Enabled = _controller.CanOperateOnSelection(Predicates.CreateIntArrayNodePred);
             _buttonAddTagLongArray.Enabled = _controller.CanOperateOnSelection(Predicates.CreateLongArrayNodePred);
+            _buttonAddTagDoubleArray.Enabled = _controller.CanOperateOnSelection(Predicates.CreateDoubleArrayNodePred);
             _buttonAddTagString.Enabled = _controller.CanOperateOnSelection(Predicates.CreateStringNodePred);
             _buttonAddTagList.Enabled = _controller.CanOperateOnSelection(Predicates.CreateListNodePred);
             _buttonAddTagCompound.Enabled = _controller.CanOperateOnSelection(Predicates.CreateCompoundNodePred);
@@ -761,6 +765,10 @@ namespace NBTExplorer.Windows
         private void _buttonAddTagLongArray_Click (object sender, EventArgs e)
         {
             _controller.CreateNode(TagType.TAG_LONG_ARRAY);
+        }
+
+        private void _buttonAddTagDoubleArray_Click(object sender, EventArgs e) {
+            _controller.CreateNode(TagType.TAG_DOUBLE_ARRAY);
         }
 
         private void _buttonAddTagShort_Click (object sender, EventArgs e)

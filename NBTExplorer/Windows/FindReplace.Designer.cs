@@ -65,6 +65,7 @@
             this._tbReplaceByteArray = new System.Windows.Forms.ToolStripButton();
             this._tbReplaceIntArray = new System.Windows.Forms.ToolStripButton();
             this._tbReplaceLongArray = new System.Windows.Forms.ToolStripButton();
+            this._tbReplaceDoubleArray = new System.Windows.Forms.ToolStripButton();
             this._tbReplaceString = new System.Windows.Forms.ToolStripButton();
             this._tbReplaceList = new System.Windows.Forms.ToolStripButton();
             this._tbReplaceCompound = new System.Windows.Forms.ToolStripButton();
@@ -370,6 +371,7 @@
             this._tbReplaceByteArray,
             this._tbReplaceIntArray,
             this._tbReplaceLongArray,
+            this._tbReplaceDoubleArray,
             this._tbReplaceString,
             this._tbReplaceList,
             this._tbReplaceCompound});
@@ -493,6 +495,16 @@
             this._tbReplaceLongArray.Size = new System.Drawing.Size(23, 22);
             this._tbReplaceLongArray.Text = "Add Long Array Tag";
             this._tbReplaceLongArray.Click += new System.EventHandler(this._tbReplaceLongArray_Click);
+            // 
+            // _tbReplaceDoubleArray
+            // 
+            this._tbReplaceDoubleArray.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this._tbReplaceDoubleArray.Image = ((System.Drawing.Image)(resources.GetObject("_tbReplaceDoubleArray.Image")));
+            this._tbReplaceDoubleArray.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this._tbReplaceDoubleArray.Name = "_tbReplaceDoubleArray";
+            this._tbReplaceDoubleArray.Size = new System.Drawing.Size(23, 22);
+            this._tbReplaceDoubleArray.Text = "Add Double Array Tag";
+            this._tbReplaceDoubleArray.Click += new System.EventHandler(this._tbReplaceDoubleArray_Click);
             // 
             // _tbReplaceString
             // 
@@ -673,5 +685,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.CheckBox _deleteTagsCheckbox;
         private System.Windows.Forms.ToolStripButton _tbReplaceLongArray;
+        private System.Windows.Forms.ToolStripButton _tbReplaceDoubleArray;
     }
 }

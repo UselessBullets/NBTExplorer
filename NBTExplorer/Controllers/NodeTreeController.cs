@@ -765,6 +765,7 @@ namespace NBTExplorer.Controllers
             _iconRegistry.Register(typeof(TagShortArrayDataNode), 16);
             _iconRegistry.Register(typeof(TagLongArrayDataNode), 17);
             _iconRegistry.Register(typeof(RootDataNode), 18);
+            _iconRegistry.Register(typeof(TagDoubleArrayDataNode), 19);
         }
 
         private void UpdateNodeText (TreeNode node)
@@ -961,6 +962,11 @@ namespace NBTExplorer.Controllers
             {
                 caps = GroupCapabilities.Single;
                 return (dataNode != null) && dataNode.CanCreateTag(TagType.TAG_LONG_ARRAY);
+            }
+
+            public static bool CreateDoubleArrayNodePred(DataNode dataNode, out GroupCapabilities caps) {
+                caps = GroupCapabilities.Single;
+                return (dataNode != null) && dataNode.CanCreateTag(TagType.TAG_DOUBLE_ARRAY);
             }
 
             public static bool CreateStringNodePred (DataNode dataNode, out GroupCapabilities caps)
