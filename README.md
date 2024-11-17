@@ -1,4 +1,4 @@
-# NBTExplorer
+# BTAExplorer
 
 BTAExplorer is an open-source fork of the NBTExplorer NBT editor for all common sources of NBT data.  It's mainly intended for editing [Better than Adventure](https://betterthanadventure.net/) game data.
 
