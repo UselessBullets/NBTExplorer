@@ -23,7 +23,7 @@ namespace BTAExplorer.Model {
         }
 
         public override string NodeDisplay {
-            get { return NodeDisplayPrefix + Tag.Data.Length + " double floats"; }
+            get { return NodeDisplayPrefix + Tag.Data.Length + " doubles"; }
         }
     }
 }
