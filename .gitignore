@@ -4,5 +4,6 @@ obj
 *.user
 *.cache
 *.userprefs
+*.vs
 Staging/
 UpgradeLog*.htm

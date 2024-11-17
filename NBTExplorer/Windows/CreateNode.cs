@@ -97,6 +97,8 @@ namespace NBTExplorer.Windows
                     return new TagNodeCompound();
                 case TagType.TAG_DOUBLE:
                     return new TagNodeDouble();
+                case TagType.TAG_DOUBLE_ARRAY:
+                    return new TagNodeDoubleArray(new double[_size]);
                 case TagType.TAG_FLOAT:
                     return new TagNodeFloat();
                 case TagType.TAG_INT:
@@ -167,6 +169,7 @@ namespace NBTExplorer.Windows
                     case TagType.TAG_INT_ARRAY:
                     case TagType.TAG_SHORT_ARRAY:
                     case TagType.TAG_LONG_ARRAY:
+                    case TagType.TAG_DOUBLE_ARRAY:
                         return true;
                     default:
                         return false;

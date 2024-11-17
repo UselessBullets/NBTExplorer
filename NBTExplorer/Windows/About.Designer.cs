@@ -67,7 +67,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "About";
-            this.Text = "About NBTExplorer";
+            this.Text = "About BTAExplorer";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

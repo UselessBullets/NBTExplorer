@@ -167,6 +167,10 @@ namespace NBTExplorer.Windows
             _replaceController.CreateNode(TagType.TAG_LONG_ARRAY);
         }
 
+        private void _tbReplaceDoubleArray_Click(object sender, EventArgs e) {
+            _replaceController.CreateNode(TagType.TAG_DOUBLE_ARRAY);
+        }
+
         private void _tbReplaceString_Click (object sender, EventArgs e)
         {
             _replaceController.CreateNode(TagType.TAG_STRING);
