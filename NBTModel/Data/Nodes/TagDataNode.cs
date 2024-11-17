@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using NBTModel.Interop;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public abstract class TagDataNode : DataNode
     {
@@ -351,7 +351,8 @@ namespace NBTExplorer.Model
 
                 ByteArrayFormData data = new ByteArrayFormData() {
                     NodeName = NodeName,
-                    BytesPerElement = 1,
+                    BytesPerElement = sizeof (byte),
+                    ElementType = typeof (byte),
                     Data = byteData,
                 };
 
@@ -378,7 +379,8 @@ namespace NBTExplorer.Model
 
                 ByteArrayFormData data = new ByteArrayFormData() {
                     NodeName = NodeName,
-                    BytesPerElement = 2,
+                    BytesPerElement = sizeof (short),
+                    ElementType = typeof (short),
                     Data = byteData,
                 };
 
@@ -408,7 +410,8 @@ namespace NBTExplorer.Model
 
                 ByteArrayFormData data = new ByteArrayFormData() {
                     NodeName = NodeName,
-                    BytesPerElement = 4,
+                    BytesPerElement = sizeof (int),
+                    ElementType = typeof (int),
                     Data = byteData,
                 };
 
@@ -441,7 +444,8 @@ namespace NBTExplorer.Model
                 ByteArrayFormData data = new ByteArrayFormData()
                 {
                     NodeName = NodeName,
-                    BytesPerElement = 8,
+                    BytesPerElement = sizeof (long),
+                    ElementType = typeof (long),
                     Data = byteData,
                 };
 
@@ -451,6 +455,36 @@ namespace NBTExplorer.Model
                     for (int i = 0; i < latag.Length; i++)
                     {
                         latag.Data[i] = BitConverter.ToInt64(data.Data, i * 8);
+                    }
+
+                    IsDataModified = true;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        protected bool EditDoubleHexValue(TagNode tag) {
+            if (FormRegistry.EditByteArray != null) {
+                TagNodeDoubleArray datag = tag.ToTagDoubleArray();
+                byte[] byteData = new byte[datag.Length * 8];
+                for (int i = 0; i < datag.Length; i++) {
+                    byte[] buf = BitConverter.GetBytes(datag.Data[i]);
+                    Array.Copy(buf, 0, byteData, 8 * i, 8);
+                }
+
+                ByteArrayFormData data = new ByteArrayFormData() {
+                    NodeName = NodeName,
+                    BytesPerElement = sizeof (double),
+                    ElementType = typeof (double),
+                    Data = byteData,
+                };
+
+                if (FormRegistry.EditByteArray(data)) {
+                    datag.Data = new double[data.Data.Length / 8];
+                    for (int i = 0; i < datag.Length; i++) {
+                        datag.Data[i] = BitConverter.ToDouble(data.Data, i * 8);
                     }
 
                     IsDataModified = true;

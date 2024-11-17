@@ -76,6 +76,7 @@ namespace NBTModel.Interop
     {
         public string NodeName { get; set; }
         public int BytesPerElement { get; set; }
+        public Type ElementType { get; set; }
         public byte[] Data { get; set; }
     }
 }

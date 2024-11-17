@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public partial class Find : Form
     {

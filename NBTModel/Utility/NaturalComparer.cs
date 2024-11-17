@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace NBTExplorer.Utility
+namespace BTAExplorer.Utility
 {
     // NaturalComparer implementation by Justin.Jones
     // Licensed under The Code Project Open License (CPOL) (http://www.codeproject.com/info/cpol10.aspx)

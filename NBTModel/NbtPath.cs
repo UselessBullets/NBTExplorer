@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class NbtPathEnumerator : IEnumerable<DataNode>
     {

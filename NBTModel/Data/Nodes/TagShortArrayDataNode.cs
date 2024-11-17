@@ -1,7 +1,7 @@
 ﻿using System;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class TagShortArrayDataNode : TagDataNode
     {

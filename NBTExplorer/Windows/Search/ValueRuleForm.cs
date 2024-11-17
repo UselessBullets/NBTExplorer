@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using NBTExplorer.Model.Search;
+using BTAExplorer.Model.Search;
 
-namespace NBTExplorer.Windows.Search
+namespace BTAExplorer.Windows.Search
 {
     public partial class ValueRuleForm : Form
     {

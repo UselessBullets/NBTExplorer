@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using NBTExplorer.Utility;
+using BTAExplorer.Utility;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class DataNodeCollection : IList<DataNode>
     {

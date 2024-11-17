@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     [Flags]
     public enum NodeCapabilities

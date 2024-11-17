@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using NBTExplorer.Model;
+using BTAExplorer.Model;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public partial class FindBlock : Form
     {

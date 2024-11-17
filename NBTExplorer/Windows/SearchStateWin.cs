@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using NBTExplorer.Model;
+using BTAExplorer.Model;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     internal class SearchStateWin : NameValueSearchState
     {

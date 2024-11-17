@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
-using NBTExplorer.Model;
-using NBTExplorer.Vendor.MultiSelectTreeView;
-using NBTExplorer.Windows;
+using BTAExplorer.Model;
+using BTAExplorer.Vendor.MultiSelectTreeView;
+using BTAExplorer.Windows;
 using Substrate.Nbt;
 using System.Collections;
-using NBTExplorer.Utility;
+using BTAExplorer.Utility;
 
-namespace NBTExplorer.Controllers
+namespace BTAExplorer.Controllers
 {
     public class MessageBoxEventArgs : EventArgs
     {

@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using NBTModel.Interop;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public static class FormHandlers
     {
@@ -59,7 +59,7 @@ namespace NBTExplorer.Windows
 
         public static bool EditByteArrayHandler (ByteArrayFormData data)
         {
-            HexEditor form = new HexEditor(data.NodeName, data.Data, data.BytesPerElement);
+            HexEditor form = new HexEditor(data.NodeName, data.Data, data.ElementType, data.BytesPerElement);
             if (form.ShowDialog() == DialogResult.OK && form.Modified) {
                 data.Data = new byte[form.Data.Length];
                 Array.Copy(form.Data, data.Data, data.Data.Length);

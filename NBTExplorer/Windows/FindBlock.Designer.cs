@@ -1,4 +1,4 @@
-﻿namespace NBTExplorer.Windows
+﻿namespace BTAExplorer.Windows
 {
     partial class FindBlock
     {
@@ -45,16 +45,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this._cancelButton = new System.Windows.Forms.Button();
-            this._blockZTextBox = new NBTExplorer.Windows.WatermarkTextBox();
-            this._blockXTextBox = new NBTExplorer.Windows.WatermarkTextBox();
-            this._chunkZTextBox = new NBTExplorer.Windows.WatermarkTextBox();
-            this._chunkXTextBox = new NBTExplorer.Windows.WatermarkTextBox();
-            this._regionZTextBox = new NBTExplorer.Windows.WatermarkTextBox();
-            this._regionXTextBox = new NBTExplorer.Windows.WatermarkTextBox();
-            this._localChunkXTextBox = new NBTExplorer.Windows.WatermarkTextBox();
-            this._localChunkZTextBox = new NBTExplorer.Windows.WatermarkTextBox();
-            this._localBlockZTextBox = new NBTExplorer.Windows.WatermarkTextBox();
-            this._localBlockXTextBox = new NBTExplorer.Windows.WatermarkTextBox();
+            this._blockZTextBox = new BTAExplorer.Windows.WatermarkTextBox();
+            this._blockXTextBox = new BTAExplorer.Windows.WatermarkTextBox();
+            this._chunkZTextBox = new BTAExplorer.Windows.WatermarkTextBox();
+            this._chunkXTextBox = new BTAExplorer.Windows.WatermarkTextBox();
+            this._regionZTextBox = new BTAExplorer.Windows.WatermarkTextBox();
+            this._regionXTextBox = new BTAExplorer.Windows.WatermarkTextBox();
+            this._localChunkXTextBox = new BTAExplorer.Windows.WatermarkTextBox();
+            this._localChunkZTextBox = new BTAExplorer.Windows.WatermarkTextBox();
+            this._localBlockZTextBox = new BTAExplorer.Windows.WatermarkTextBox();
+            this._localBlockXTextBox = new BTAExplorer.Windows.WatermarkTextBox();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public partial class EditName : Form
     {

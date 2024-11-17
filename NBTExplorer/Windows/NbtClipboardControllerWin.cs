@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using NBTModel.Interop;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public class NbtClipboardControllerWin : INbtClipboardController
     {

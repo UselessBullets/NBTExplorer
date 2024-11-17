@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public delegate bool NamePatternTestFunc (string path);
     public delegate DataNode NodeCreateFunc (string path);

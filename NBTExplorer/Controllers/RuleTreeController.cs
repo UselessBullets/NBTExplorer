@@ -1,10 +1,10 @@
 ﻿using System.Windows.Forms;
-using NBTExplorer.Model.Search;
-using NBTExplorer.Windows;
-using NBTExplorer.Windows.Search;
+using BTAExplorer.Model.Search;
+using BTAExplorer.Windows;
+using BTAExplorer.Windows.Search;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Controllers
+namespace BTAExplorer.Controllers
 {
     public class RuleTreeController
     {

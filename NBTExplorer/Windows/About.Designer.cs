@@ -1,4 +1,4 @@
-﻿namespace NBTExplorer.Windows
+﻿namespace BTAExplorer.Windows
 {
     partial class About
     {

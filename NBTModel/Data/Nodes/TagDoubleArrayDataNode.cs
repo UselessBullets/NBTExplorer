@@ -1,7 +1,7 @@
 ﻿using System;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Model {
+namespace BTAExplorer.Model {
     public class TagDoubleArrayDataNode : TagDataNode {
         public TagDoubleArrayDataNode(TagNodeDoubleArray tag)
             : base(tag) { }
@@ -19,11 +19,11 @@ namespace NBTExplorer.Model {
         }
 
         public override bool EditNode() {
-            return EditLongHexValue(Tag);
+            return EditDoubleHexValue(Tag);
         }
 
         public override string NodeDisplay {
-            get { return NodeDisplayPrefix + Tag.Data.Length + " double floats"; }
+            get { return NodeDisplayPrefix + Tag.Data.Length + " doubles"; }
         }
     }
 }

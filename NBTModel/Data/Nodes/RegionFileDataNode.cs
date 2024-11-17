@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using NBTModel.Interop;
 using System;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class RegionFileDataNode : DataNode
     {

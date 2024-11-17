@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public partial class EditValue : Form
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Model.Search
+namespace BTAExplorer.Model.Search
 {
     public enum NumericOperator
     {

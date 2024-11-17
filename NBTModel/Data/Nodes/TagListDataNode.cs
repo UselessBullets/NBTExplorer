@@ -2,7 +2,7 @@
 using NBTModel.Interop;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class TagListDataNode : TagDataNode.Container
     {

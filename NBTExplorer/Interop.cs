@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace NBTExplorer
+namespace BTAExplorer
 {
     internal static class Interop
     {
