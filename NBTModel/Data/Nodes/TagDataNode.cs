@@ -351,7 +351,8 @@ namespace BTAExplorer.Model
 
                 ByteArrayFormData data = new ByteArrayFormData() {
                     NodeName = NodeName,
-                    BytesPerElement = 1,
+                    BytesPerElement = sizeof (byte),
+                    ElementType = typeof (byte),
                     Data = byteData,
                 };
 
@@ -378,7 +379,8 @@ namespace BTAExplorer.Model
 
                 ByteArrayFormData data = new ByteArrayFormData() {
                     NodeName = NodeName,
-                    BytesPerElement = 2,
+                    BytesPerElement = sizeof (short),
+                    ElementType = typeof (short),
                     Data = byteData,
                 };
 
@@ -408,7 +410,8 @@ namespace BTAExplorer.Model
 
                 ByteArrayFormData data = new ByteArrayFormData() {
                     NodeName = NodeName,
-                    BytesPerElement = 4,
+                    BytesPerElement = sizeof (int),
+                    ElementType = typeof (int),
                     Data = byteData,
                 };
 
@@ -441,7 +444,8 @@ namespace BTAExplorer.Model
                 ByteArrayFormData data = new ByteArrayFormData()
                 {
                     NodeName = NodeName,
-                    BytesPerElement = 8,
+                    BytesPerElement = sizeof (long),
+                    ElementType = typeof (long),
                     Data = byteData,
                 };
 
@@ -472,7 +476,8 @@ namespace BTAExplorer.Model
 
                 ByteArrayFormData data = new ByteArrayFormData() {
                     NodeName = NodeName,
-                    BytesPerElement = 8,
+                    BytesPerElement = sizeof (double),
+                    ElementType = typeof (double),
                     Data = byteData,
                 };
 
