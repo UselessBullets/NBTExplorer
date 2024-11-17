@@ -1,4 +1,4 @@
-﻿namespace NBTExplorer.Windows
+﻿namespace BTAExplorer.Windows
 {
     partial class MainForm
     {
@@ -99,7 +99,7 @@
             this.ContentPanel = new System.Windows.Forms.ToolStripContentPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this._nodeTree = new NBTExplorer.Vendor.MultiSelectTreeView.MultiSelectTreeView();
+            this._nodeTree = new BTAExplorer.Vendor.MultiSelectTreeView.MultiSelectTreeView();
             this._buttonAddTagLongArray = new System.Windows.Forms.ToolStripButton();
             this._buttonAddTagDoubleArray = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
@@ -161,7 +161,7 @@
             // 
             this._menuItemOpenMinecraftSaveFolder.Name = "_menuItemOpenMinecraftSaveFolder";
             this._menuItemOpenMinecraftSaveFolder.Size = new System.Drawing.Size(233, 22);
-            this._menuItemOpenMinecraftSaveFolder.Text = "Open &Minecraft Save Folder";
+            this._menuItemOpenMinecraftSaveFolder.Text = "Open &BTA Save Folder";
             // 
             // toolStripSeparator12
             // 
@@ -788,7 +788,7 @@
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem searchToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private NBTExplorer.Vendor.MultiSelectTreeView.MultiSelectTreeView _nodeTree;
+        private BTAExplorer.Vendor.MultiSelectTreeView.MultiSelectTreeView _nodeTree;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton _buttonOpen;
         private System.Windows.Forms.ToolStripButton _buttonSave;

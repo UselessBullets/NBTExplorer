@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using NBTModel.Interop;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class TagCompoundDataNode : TagDataNode.Container
     {

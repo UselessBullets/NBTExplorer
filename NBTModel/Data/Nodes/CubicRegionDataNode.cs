@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using NBTModel.Interop;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class CubicRegionDataNode : DataNode
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public class IconRegistry
     {

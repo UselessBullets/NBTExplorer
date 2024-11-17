@@ -4,9 +4,9 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using NBTExplorer.Windows;
+using BTAExplorer.Windows;
 
-namespace NBTExplorer
+namespace BTAExplorer
 {
     static class Program
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     class FilterExpressionParser
     {

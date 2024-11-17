@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace NBTExplorer.Vendor.MultiSelectTreeView
+namespace BTAExplorer.Vendor.MultiSelectTreeView
 {
 	public class MultiSelectTreeView : TreeView
 	{

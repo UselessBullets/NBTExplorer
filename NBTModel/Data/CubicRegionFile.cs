@@ -2,7 +2,7 @@
 using System.Text.RegularExpressions;
 using Substrate.Core;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class CubicRegionFile : RegionFile
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class DirectoryDataNode : DataNode
     {

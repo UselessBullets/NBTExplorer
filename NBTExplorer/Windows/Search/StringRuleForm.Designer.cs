@@ -1,4 +1,4 @@
-﻿namespace NBTExplorer.Windows.Search
+﻿namespace BTAExplorer.Windows.Search
 {
     partial class StringRuleForm
     {

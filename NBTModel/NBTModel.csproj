@@ -7,7 +7,7 @@
     <ProjectGuid>{20D7CBA3-5B6D-40B0-8D28-4C9A58E4FFBC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NBTExplorer.Model</RootNamespace>
+    <RootNamespace>BTAExplorer.Model</RootNamespace>
     <AssemblyName>NBTModel</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

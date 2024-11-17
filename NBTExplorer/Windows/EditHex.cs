@@ -7,21 +7,23 @@ using System.ComponentModel;
 using System.Text;
 using System.Drawing;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public partial class HexEditor : Form
     {
         private abstract class EditView
         {
-            protected EditView (StatusStrip statusBar, int bytesPerElem)
+            protected EditView (StatusStrip statusBar, Type type, int bytesPerElem)
             {
                 BytesPerElem = bytesPerElem;
+                ElementType = type;
                 StatusBar = statusBar;
             }
 
             public event EventHandler Modified;
 
             public int BytesPerElem { get; set; }
+            public Type ElementType { get; set; }
             public StatusStrip StatusBar { get; set; }
 
             public abstract TabPage TabPage { get; }
@@ -49,8 +51,8 @@ namespace NBTExplorer.Windows
 
             private Dictionary<int, int> _elemIndex = new Dictionary<int, int>();
 
-            public TextView (StatusStrip statusBar, int bytesPerElem)
-                : base(statusBar, bytesPerElem)
+            public TextView (StatusStrip statusBar, Type type, int bytesPerElem)
+                : base(statusBar, type, bytesPerElem)
             { }
 
             public override void Initialize ()
@@ -114,12 +116,12 @@ namespace NBTExplorer.Windows
 
             public override byte[] GetRawData ()
             {
-                return HexEditor.TextToRaw(_textBox.Text, BytesPerElem);
+                return HexEditor.TextToRaw(_textBox.Text, ElementType, BytesPerElem);
             }
 
             public override void SetRawData (byte[] data)
             {
-                _textBox.Text = HexEditor.RawToText(data, BytesPerElem);
+                _textBox.Text = HexEditor.RawToText(data, ElementType, BytesPerElem);
                 RebuildElementIndex();
             }
 
@@ -168,8 +170,8 @@ namespace NBTExplorer.Windows
 
             private DynamicByteProvider _byteProvider;
 
-            public HexView (StatusStrip statusBar, int bytesPerElem)
-                : base(statusBar, bytesPerElem)
+            public HexView (StatusStrip statusBar, Type type, int bytesPerElem)
+                : base(statusBar, type, bytesPerElem)
             { }
 
             public override void Initialize ()
@@ -291,16 +293,17 @@ namespace NBTExplorer.Windows
 
         private TabPage _previousPage;
         private int _bytesPerElem;
+        private Type _elementType;
         private byte[] _data;
         private bool _modified;
 
         private Dictionary<TabPage, EditView> _views = new Dictionary<TabPage, EditView>();
 
-        public HexEditor (string tagName, byte[] data, int bytesPerElem)
+        public HexEditor (string tagName, byte[] data, Type elementType, int bytesPerElem)
         {
             InitializeComponent();
 
-            EditView textView = new TextView(statusStrip1, bytesPerElem);
+            EditView textView = new TextView(statusStrip1, elementType, bytesPerElem);
             textView.Initialize();
             textView.SetRawData(data);
             textView.Modified += (s, e) => { _modified = true; };
@@ -311,7 +314,7 @@ namespace NBTExplorer.Windows
             EditView hexView = null;
 
             if (!IsMono()) {
-                hexView = new HexView(statusStrip1, bytesPerElem);
+                hexView = new HexView(statusStrip1, elementType, bytesPerElem);
                 hexView.Initialize();
                 hexView.SetRawData(data);
                 hexView.Modified += (s, e) => { _modified = true; };
@@ -335,6 +338,7 @@ namespace NBTExplorer.Windows
             this.Text = "Editing: " + tagName;
 
             _bytesPerElem = bytesPerElem;
+            _elementType = elementType;
 
             _data = new byte[data.Length];
             Array.Copy(data, _data, data.Length);
@@ -383,21 +387,21 @@ namespace NBTExplorer.Windows
 
         private String RawToText (byte[] data)
         {
-            return RawToText(data, _bytesPerElem);
+            return RawToText(data, _elementType, _bytesPerElem);
         }
 
-        private static String RawToText (byte[] data, int bytesPerElem)
+        private static String RawToText (byte[] data, Type type, int bytesPerElem)
         {
             switch (bytesPerElem) {
-                case 1: return RawToText(data, bytesPerElem, 16);
-                case 2: return RawToText(data, bytesPerElem, 8);
-                case 4: return RawToText(data, bytesPerElem, 4);
-                case 8: return RawToText(data, bytesPerElem, 2);
-                default: return RawToText(data, bytesPerElem, 1);
+                case 1: return RawToText(data, type, bytesPerElem, 16);
+                case 2: return RawToText(data, type, bytesPerElem, 8);
+                case 4: return RawToText(data, type, bytesPerElem, 4);
+                case 8: return RawToText(data, type, bytesPerElem, 2);
+                default: return RawToText(data, type, bytesPerElem, 1);
             }
         }
 
-        private static String RawToText (byte[] data, int bytesPerElem, int elementsPerLine)
+        private static String RawToText (byte[] data, Type elementType, int bytesPerElem, int elementsPerLine)
         {
             StringBuilder builder = new StringBuilder();
 
@@ -419,6 +423,10 @@ namespace NBTExplorer.Windows
                         break;
 
                     case 8:
+                        if (elementType.IsEquivalentTo(typeof(double))) {
+                            builder.Append(BitConverter.ToDouble(data, i).ToString());
+                            break;
+                        }
                         builder.Append(BitConverter.ToInt64(data, i).ToString());
                         break;
                 }
@@ -434,10 +442,10 @@ namespace NBTExplorer.Windows
 
         private byte[] TextToRaw (string text)
         {
-            return TextToRaw(text, _bytesPerElem);
+            return TextToRaw(text, _elementType, _bytesPerElem);
         }
 
-        private static byte[] TextToRaw (string text, int bytesPerElem)
+        private static byte[] TextToRaw (string text, Type elementType, int bytesPerElem)
         {
             string[] items = text.Split(null as char[], StringSplitOptions.RemoveEmptyEntries);
             byte[] data = new byte[bytesPerElem * items.Length];
@@ -469,6 +477,14 @@ namespace NBTExplorer.Windows
                         break;
 
                     case 8:
+                        if (elementType.IsEquivalentTo(typeof(double))) {
+                            double vald8;
+                            if (double.TryParse(items[i], out vald8)) {
+                                byte[] buffer = BitConverter.GetBytes(vald8);
+                                Array.Copy(buffer, 0, data, index, 8);
+                            }
+                            break;
+                        }
                         long val8;
                         if (long.TryParse(items[i], out val8)) {
                             byte[] buffer = BitConverter.GetBytes(val8);

@@ -5,13 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using NBTExplorer.Controllers;
+using BTAExplorer.Controllers;
 using Substrate.Nbt;
-using NBTExplorer.Model;
+using BTAExplorer.Model;
 using System.Threading;
-using NBTExplorer.Model.Search;
+using BTAExplorer.Model.Search;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public partial class FindReplace : Form
     {

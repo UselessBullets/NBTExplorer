@@ -5,12 +5,12 @@ using System.ComponentModel;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using NBTExplorer.Model;
-using NBTExplorer.Properties;
+using BTAExplorer.Model;
+using BTAExplorer.Properties;
 using Substrate.Nbt;
-using NBTExplorer.Controllers;
+using BTAExplorer.Controllers;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     using Predicates = NodeTreeController.Predicates;
     using NBTModel.Interop;
@@ -255,7 +255,7 @@ namespace NBTExplorer.Windows
 
         private void OpenMinecraftDirectory ()
         {
-            if (!ConfirmAction("Open Minecraft save folder anyway?"))
+            if (!ConfirmAction("Open Better than Adventure save folder anyway?"))
                 return;
 
             try {
@@ -264,7 +264,7 @@ namespace NBTExplorer.Windows
                     path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 }
 
-                path = Path.Combine(path, ".minecraft");
+                path = Path.Combine(path, ".minecraft-bta");
                 path = Path.Combine(path, "saves");
 
                 if (!Directory.Exists(path)) {
@@ -274,7 +274,7 @@ namespace NBTExplorer.Windows
                 OpenPaths(new string[] { path });
             }
             catch (Exception e) {
-                MessageBox.Show("Could not open default Minecraft save directory");
+                MessageBox.Show("Could not open default Better than Adventure save directory");
                 Console.WriteLine(e.Message);
 
                 try {
