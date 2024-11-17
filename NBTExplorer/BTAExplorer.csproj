@@ -239,6 +239,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\FindReplace.resx">
       <DependentUpon>FindReplace.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -256,6 +257,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\CreateNode.resx">
       <DependentUpon>CreateNode.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\EditValue.resx">
       <DependentUpon>EditValue.cs</DependentUpon>
@@ -265,6 +267,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\EditHex.resx">
       <DependentUpon>EditHex.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
