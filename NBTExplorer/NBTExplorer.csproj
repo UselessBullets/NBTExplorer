@@ -9,7 +9,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NBTExplorer</RootNamespace>
-    <AssemblyName>NBTExplorer</AssemblyName>
+    <AssemblyName>BTAExplorer</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -51,7 +51,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>dead_bush.ico</ApplicationIcon>
+    <ApplicationIcon>spinifex.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <DebugSymbols>True</DebugSymbols>
@@ -246,6 +246,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\About.resx">
       <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\EditName.resx">
       <DependentUpon>EditName.cs</DependentUpon>
@@ -292,13 +293,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dead_bush.ico" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Resources\arrow-090.png" />
     <None Include="Resources\arrow-270.png" />
+    <Content Include="spinifex.ico" />
     <Content Include="Windows\NBTExplorer.visualelementsmanifest.xml" />
     <Content Include="Vendor\Be.Windows.Forms.HexBox\HexBox.bmp" />
   </ItemGroup>

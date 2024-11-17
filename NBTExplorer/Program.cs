@@ -51,8 +51,8 @@ namespace NBTExplorer
             if (e.ExceptionObject is Exception)
                 ProcessException(e.ExceptionObject as Exception);
             else if (e.IsTerminating) {
-                MessageBox.Show("NBTExplorer encountered an unknown exception object: " + e.ExceptionObject.GetType().FullName,
-                    "NBTExplorer failed to run", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("BTAExplorer encountered an unknown exception object: " + e.ExceptionObject.GetType().FullName,
+                    "BTAExplorer failed to run", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
@@ -60,21 +60,21 @@ namespace NBTExplorer
         private static void ProcessException (Exception ex)
         {
             if (IsMissingSubstrate(ex)) {
-                MessageBox.Show("NBTExplorer could not find required assembly \"Substrate.dll\".\n\nIf you obtained NBTExplorer from a ZIP distribution, make sure you've extracted NBTExplorer and all of its supporting files into another directory before running it.", 
-                    "NBTExplorer failed to run", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("BTAExplorer could not find required assembly \"Substrate-BTA.dll\".\n\nIf you obtained BTAExplorer from a ZIP distribution, make sure you've extracted BTAExplorer and all of its supporting files into another directory before running it.", 
+                    "BTAExplorer failed to run", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
                 return;
             }
 
             if (IsMissingNBTModel(ex)) {
-                MessageBox.Show("NBTExplorer could not find required assembly \"NBTModel.dll\".\n\nIf you obtained NBTExplorer from a ZIP distribution, make sure you've extracted NBTExplorer and all of its supporting files into another directory before running it.",
-                    "NBTExplorer failed to run", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("BTAExplorer could not find required assembly \"NBTModel.dll\".\n\nIf you obtained BTAExplorer from a ZIP distribution, make sure you've extracted BTAExplorer and all of its supporting files into another directory before running it.",
+                    "BTAExplorer failed to run", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
                 return;
             }
 
             StringBuilder errorText = new StringBuilder();
-            errorText.AppendLine("NBTExplorer encountered the following exception while trying to run: " + ex.GetType().Name);
+            errorText.AppendLine("BTAExplorer encountered the following exception while trying to run: " + ex.GetType().Name);
             errorText.AppendLine("Message: " + ex.Message);
 
             Exception ix = ex;
@@ -86,13 +86,13 @@ namespace NBTExplorer
             }
 
             try {
-                string logDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "NBTExplorer");
+                string logDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "BTAExplorer");
                 if (!Directory.Exists(logDir))
                     Directory.CreateDirectory(logDir);
 
                 string logPath = Path.Combine(logDir, "error.log");
                 using (var writer = new StreamWriter(logPath, true)) {
-                    writer.WriteLine("NBTExplorer Error Report");
+                    writer.WriteLine("BTAExplorer Error Report");
                     writer.WriteLine(DateTime.Now);
                     writer.WriteLine("-------");
                     writer.WriteLine(errorText);
@@ -113,7 +113,7 @@ namespace NBTExplorer
             }
             catch { }
 
-            MessageBox.Show(errorText.ToString(), "NBTExplorer failed to run", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(errorText.ToString(), "BTAExplorer failed to run", MessageBoxButtons.OK, MessageBoxIcon.Error);
             Application.Exit();
         }
 

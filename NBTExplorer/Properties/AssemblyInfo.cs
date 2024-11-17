@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NBTExplorer")]
-[assembly: AssemblyDescription("Graphical editor for most NBT data sources.  NBT is used by Minecraft.")]
+[assembly: AssemblyTitle("BTAExplorer")]
+[assembly: AssemblyDescription("Graphical editor for most BTA NBT data sources.  NBT is used by Minecraft.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NBTExplorer")]
-[assembly: AssemblyCopyright("Copyright © Justin Aquadro 2011-2017")]
+[assembly: AssemblyProduct("BTAExplorer")]
+[assembly: AssemblyCopyright("Copyright © Useless 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.8.0.0")]
-[assembly: AssemblyFileVersion("2.8.0.0")]
+[assembly: AssemblyVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.0.0")]
