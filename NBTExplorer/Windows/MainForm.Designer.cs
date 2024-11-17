@@ -161,7 +161,7 @@
             // 
             this._menuItemOpenMinecraftSaveFolder.Name = "_menuItemOpenMinecraftSaveFolder";
             this._menuItemOpenMinecraftSaveFolder.Size = new System.Drawing.Size(233, 22);
-            this._menuItemOpenMinecraftSaveFolder.Text = "Open &Minecraft Save Folder";
+            this._menuItemOpenMinecraftSaveFolder.Text = "Open &BTA Save Folder";
             // 
             // toolStripSeparator12
             // 

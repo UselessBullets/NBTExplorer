@@ -255,7 +255,7 @@ namespace BTAExplorer.Windows
 
         private void OpenMinecraftDirectory ()
         {
-            if (!ConfirmAction("Open Minecraft save folder anyway?"))
+            if (!ConfirmAction("Open Better than Adventure save folder anyway?"))
                 return;
 
             try {
@@ -264,7 +264,7 @@ namespace BTAExplorer.Windows
                     path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
                 }
 
-                path = Path.Combine(path, ".minecraft");
+                path = Path.Combine(path, ".minecraft-bta");
                 path = Path.Combine(path, "saves");
 
                 if (!Directory.Exists(path)) {
@@ -274,7 +274,7 @@ namespace BTAExplorer.Windows
                 OpenPaths(new string[] { path });
             }
             catch (Exception e) {
-                MessageBox.Show("Could not open default Minecraft save directory");
+                MessageBox.Show("Could not open default Better than Adventure save directory");
                 Console.WriteLine(e.Message);
 
                 try {
