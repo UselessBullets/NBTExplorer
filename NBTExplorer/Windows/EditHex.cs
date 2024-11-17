@@ -7,7 +7,7 @@ using System.ComponentModel;
 using System.Text;
 using System.Drawing;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public partial class HexEditor : Form
     {

@@ -5,12 +5,12 @@ using System.ComponentModel;
 using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using NBTExplorer.Model;
-using NBTExplorer.Properties;
+using BTAExplorer.Model;
+using BTAExplorer.Properties;
 using Substrate.Nbt;
-using NBTExplorer.Controllers;
+using BTAExplorer.Controllers;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     using Predicates = NodeTreeController.Predicates;
     using NBTModel.Interop;

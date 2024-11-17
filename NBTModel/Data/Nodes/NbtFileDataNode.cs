@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System;
 using NBTModel.Interop;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class NbtFileDataNode : DataNode, IMetaTagContainer
     {

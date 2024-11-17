@@ -1,6 +1,6 @@
 ﻿using Substrate.Nbt;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class TagStringDataNode : TagDataNode
     {

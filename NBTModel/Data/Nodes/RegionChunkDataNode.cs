@@ -2,7 +2,7 @@
 using Substrate.Core;
 using Substrate.Nbt;
 
-namespace NBTExplorer.Model
+namespace BTAExplorer.Model
 {
     public class RegionChunkDataNode : DataNode, IMetaTagContainer
     {

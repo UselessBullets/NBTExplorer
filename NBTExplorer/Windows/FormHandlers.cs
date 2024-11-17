@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using NBTModel.Interop;
 
-namespace NBTExplorer.Windows
+namespace BTAExplorer.Windows
 {
     public static class FormHandlers
     {

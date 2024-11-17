@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using NBTExplorer.Model;
-using NBTExplorer.Windows;
+using BTAExplorer.Model;
+using BTAExplorer.Windows;
 
-namespace NBTExplorer.Controllers
+namespace BTAExplorer.Controllers
 {
     class ExplorerBarController
     {

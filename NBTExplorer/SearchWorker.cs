@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
-using NBTExplorer.Model;
+using BTAExplorer.Model;
 
-namespace NBTExplorer
+namespace BTAExplorer
 {
     internal interface ISearchState
     {
